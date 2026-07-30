@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deeper Conf 2K26 | 14 e 15 de agosto | Oceano da Graça</title>
+<meta name="description" content="Deeper Conf, conferência de jovens e adolescentes da Igreja Oceano da Graça. 14 e 15 de agosto de 2026, Campus Águas Claras, Brasília. Inscrições abertas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+:root{
+  --laranja:#E8481C;
+  --laranja-escuro:#C93A0C;
+  --laranja-claro:#F07B28;
+  --creme:#F0E9D2;
+  --carvao:#17130F;
+  --grafite:#221C16;
+  --grafite-2:#2B241C;
+  --radius:20px;
+  --font-display:'Archivo Black',sans-serif;
+  --font-body:'Archivo',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+body{
+  font-family:var(--font-body);
+  background:var(--carvao);
+  color:var(--creme);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.container{width:min(1160px,92%);margin-inline:auto}
+
+/* ---------- textura de papel ---------- */
+.paper::before{
+  content:"";
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.02' numOctaves='3' seed='7'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0'/%3E%3CfeComposite operator='in' in2='SourceGraphic'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E");
+  mix-blend-mode:soft-light;
+  pointer-events:none;
+}
+.grain::after{
+  content:"";
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events:none;
+}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(23,19,15,.72);
+  border-bottom:1px solid rgba(240,233,210,.08);
+}
+.nav-inner{
+  width:min(1160px,92%);margin-inline:auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding-block:14px;gap:16px;
+}
+.nav-brand{
+  font-family:var(--font-display);
+  font-size:1rem;letter-spacing:.02em;
+  color:var(--creme);text-decoration:none;white-space:nowrap;
+}
+.nav-brand span{color:var(--laranja-claro)}
+.nav-date{
+  font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(240,233,210,.55);
+}
+@media(max-width:640px){.nav-date{display:none}}
+.btn{
+  display:inline-block;
+  font-family:var(--font-body);font-weight:700;
+  font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;text-align:center;
+  padding:14px 30px;border-radius:999px;
+  transition:transform .15s ease,background .15s ease,color .15s ease;
+  border:2px solid transparent;
+  cursor:pointer;
+}
+.btn:focus-visible{outline:3px solid var(--laranja-claro);outline-offset:3px}
+.btn-primary{background:var(--creme);color:var(--carvao)}
+.btn-primary:hover{transform:translateY(-2px);background:#fff}
+.btn-ghost{border-color:rgba(240,233,210,.4);color:var(--creme);background:transparent}
+.btn-ghost:hover{border-color:var(--creme)}
+.btn-orange{background:var(--laranja);color:var(--creme)}
+.btn-orange:hover{transform:translateY(-2px);background:var(--laranja-claro)}
+.nav .btn{padding:10px 22px;font-size:.75rem}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:center;
+  background:
+    radial-gradient(120% 90% at 15% 10%,#F07B28 0%,transparent 55%),
+    radial-gradient(110% 100% at 90% 90%,#B22F08 0%,transparent 60%),
+    linear-gradient(150deg,#E85A1A 0%,#D9430F 55%,#C93A0C 100%);
+  padding:120px 0 72px;
+}
+.hero-inner{position:relative;z-index:2;text-align:center}
+.hero-eyebrow{
+  font-size:.75rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;
+  color:rgba(240,233,210,.85);
+  margin-bottom:34px;
+}
+.date-badge{
+  position:relative;display:inline-block;
+  font-family:var(--font-display);
+  font-size:clamp(.9rem,2vw,1.15rem);
+  letter-spacing:.08em;color:var(--creme);
+  padding:10px 34px;margin-bottom:10px;
+}
+.date-badge svg{
+  position:absolute;inset:-8px -14px;width:calc(100% + 28px);height:calc(100% + 16px);
+  pointer-events:none;
+}
+/* wordmark com eco, assinatura da identidade */
+.wordmark{
+  font-family:var(--font-display);
+  font-size:clamp(3rem,11.5vw,9.2rem);
+  line-height:.88;
+  letter-spacing:-.015em;
+  color:var(--creme);
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.wm-echo{
+  display:flex;flex-direction:column;align-items:center;
+  user-select:none;
+}
+.wm-echo .echo{
+  color:var(--carvao);
+  opacity:.94;
+  margin-top:-.16em;
+  clip-path:inset(0 0 49% 0);
+}
+.wm-echo .echo.e2{clip-path:inset(46.5% 0 0 0);margin-top:-.79em}
+.hero-sub{
+  margin-top:30px;
+  font-size:clamp(.72rem,1.6vw,.95rem);
+  font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--creme);
+}
+.hero-sub b{color:var(--carvao);font-weight:700}
+.hero-cta{
+  margin-top:44px;
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+}
+.hero-place{
+  margin-top:26px;
+  font-size:.82rem;color:rgba(240,233,210,.8);
+  letter-spacing:.04em;
+}
+.scribble{
+  position:absolute;right:8%;top:52%;width:150px;opacity:.9;z-index:1;
+}
+@media(max-width:760px){.scribble{width:90px;right:4%;top:58%}}
+
+/* ---------- countdown ---------- */
+.count-strip{
+  background:#0E0B08;
+  border-block:1px solid rgba(240,233,210,.08);
+  padding:42px 0;
+}
+.count-grid{
+  display:flex;justify-content:center;gap:clamp(22px,7vw,84px);
+  text-align:center;flex-wrap:wrap;
+}
+.count-item .num{
+  font-family:var(--font-display);
+  font-size:clamp(2.4rem,6vw,4.4rem);
+  color:var(--creme);line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.count-item .lbl{
+  margin-top:8px;font-size:.72rem;font-weight:600;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--laranja-claro);
+}
+.count-note{
+  text-align:center;margin-top:26px;
+  font-size:.8rem;letter-spacing:.06em;color:rgba(240,233,210,.55);
+}
+
+/* ---------- seções ---------- */
+section{position:relative}
+.section-pad{padding:96px 0}
+.eyebrow{
+  font-size:.72rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--laranja-claro);margin-bottom:18px;
+}
+h2{
+  font-family:var(--font-display);
+  font-size:clamp(1.8rem,4.5vw,3rem);
+  line-height:1.05;text-transform:uppercase;
+  color:var(--creme);
+  letter-spacing:-.01em;
+}
+.sobre-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px);
+  align-items:start;
+}
+@media(max-width:860px){.sobre-grid{grid-template-columns:1fr}}
+.sobre-text p{
+  margin-top:22px;color:rgba(240,233,210,.82);
+  font-size:1.02rem;max-width:54ch;
+}
+.info-cards{display:grid;gap:14px}
+.info-card{
+  background:var(--grafite);
+  border:1px solid rgba(240,233,210,.09);
+  border-radius:var(--radius);
+  padding:22px 26px;
+  display:flex;gap:18px;align-items:flex-start;
+}
+.info-card .ic{
+  flex:none;width:42px;height:42px;border-radius:12px;
+  background:rgba(232,72,28,.16);
+  display:grid;place-items:center;
+  color:var(--laranja-claro);
+}
+.info-card h3{
+  font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--laranja-claro);margin-bottom:4px;
+}
+.info-card p{font-size:.95rem;color:var(--creme)}
+.info-card small{display:block;color:rgba(240,233,210,.55);font-size:.8rem;margin-top:2px}
+
+/* ---------- convidados ---------- */
+.convidados{background:linear-gradient(180deg,var(--carvao),#100D0A)}
+.conv-head{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+  margin-bottom:48px;flex-wrap:wrap;
+}
+.conv-head p{color:rgba(240,233,210,.65);max-width:46ch;font-size:.95rem}
+.speakers{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:22px;
+}
+.speaker{
+  position:relative;border-radius:var(--radius);overflow:hidden;
+  background:var(--grafite);
+  border:1px solid rgba(240,233,210,.08);
+  transition:transform .2s ease,border-color .2s ease;
+}
+.speaker:hover{transform:translateY(-6px);border-color:rgba(240,166,120,.45)}
+.speaker img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.speaker-foot{
+  display:flex;align-items:center;justify-content:center;
+  padding:14px;
+}
+.play-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;border:none;cursor:pointer;
+  color:var(--creme);
+  font-family:var(--font-body);font-weight:700;
+  font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:8px 12px;border-radius:999px;
+  transition:color .15s ease;
+}
+.play-btn svg{flex:none;transition:transform .15s ease}
+.play-btn:hover{color:var(--laranja-claro)}
+.play-btn:hover svg{transform:scale(1.12)}
+.play-btn:focus-visible{outline:3px solid var(--laranja-claro);outline-offset:2px}
+
+/* ---------- programação ---------- */
+.prog{background:var(--laranja);color:var(--carvao);overflow:hidden}
+.prog h2{color:var(--carvao)}
+.prog .eyebrow{color:var(--carvao);opacity:.75}
+.prog-list{margin-top:52px;display:grid;gap:0}
+.prog-item{
+  display:grid;
+  grid-template-columns:150px 1fr auto;
+  gap:26px;align-items:center;
+  padding:28px 6px;
+  border-top:2px solid rgba(23,19,15,.28);
+}
+.prog-item:last-child{border-bottom:2px solid rgba(23,19,15,.28)}
+.prog-item .dia{
+  font-family:var(--font-display);
+  font-size:1.5rem;line-height:1;
+}
+.prog-item .dia small{
+  display:block;font-family:var(--font-body);font-weight:700;
+  font-size:.68rem;letter-spacing:.24em;margin-top:6px;opacity:.7;
+}
+.prog-item .desc{font-weight:500;font-size:1rem;max-width:46ch}
+.prog-item .hora{
+  font-family:var(--font-display);font-size:1.3rem;white-space:nowrap;
+}
+@media(max-width:680px){
+  .prog-item{grid-template-columns:1fr;gap:8px}
+  .prog-item .hora{font-size:1.1rem}
+}
+
+/* ---------- cta final ---------- */
+.cta-final{
+  text-align:center;
+  background:
+    radial-gradient(90% 120% at 50% 120%,rgba(232,72,28,.35) 0%,transparent 60%),
+    #0E0B08;
+}
+.cta-final .wordmark{font-size:clamp(2rem,6.5vw,4.6rem)}
+.cta-final p.preco{
+  margin-top:26px;font-size:1rem;color:rgba(240,233,210,.8);
+}
+.cta-final p.preco b{
+  font-family:var(--font-display);font-size:1.9rem;color:var(--creme);
+  display:block;margin-top:4px;
+}
+.cta-final .btn{margin-top:34px}
+.cta-final .deadline{
+  margin-top:20px;font-size:.8rem;letter-spacing:.08em;
+  color:rgba(240,233,210,.5);
+}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid rgba(240,233,210,.08);
+  padding:44px 0;
+}
+.foot-inner{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.foot-brand{
+  font-family:var(--font-display);font-size:.95rem;letter-spacing:.06em;
+}
+.foot-brand span{color:var(--laranja-claro)}
+footer p{font-size:.8rem;color:rgba(240,233,210,.5)}
+
+/* ---------- modal de vídeo ---------- */
+.modal{
+  position:fixed;inset:0;z-index:100;
+  display:none;align-items:center;justify-content:center;
+  background:rgba(10,8,6,.88);
+  backdrop-filter:blur(8px);
+  padding:24px;
+}
+.modal.open{display:flex}
+.modal-box{
+  position:relative;width:min(420px,100%);
+  background:var(--grafite);
+  border:1px solid rgba(240,233,210,.14);
+  border-radius:24px;overflow:hidden;
+}
+.modal-box video{width:100%;aspect-ratio:4/5;background:#000}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px;
+}
+.modal-head strong{
+  font-family:var(--font-display);font-size:.9rem;letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.modal-close{
+  background:transparent;border:none;cursor:pointer;color:var(--creme);
+  width:36px;height:36px;border-radius:50%;
+  display:grid;place-items:center;
+  transition:background .15s ease;
+}
+.modal-close:hover{background:rgba(240,233,210,.12)}
+.modal-close:focus-visible{outline:3px solid var(--laranja-claro)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#topo">DEEPER<span>•</span>CONF</a>
+    <span class="nav-date">14 e 15 de agosto · Brasília DF</span>
+    <a class="btn btn-primary" href="https://inchur.ch/oBeFM" target="_blank" rel="noopener">Inscrições</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero paper grain" id="topo">
+  <svg class="scribble" viewBox="0 0 160 70" fill="none" aria-hidden="true">
+    <path d="M6 52 C40 30 120 18 152 8 M14 62 C58 44 118 34 148 24 M30 68 C70 56 120 48 144 40"
+      stroke="#F0E9D2" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+  </svg>
+  <div class="container hero-inner">
+    <p class="hero-eyebrow">Oceano da Graça · 25 anos</p>
+
+    <div class="date-badge">
+      <svg viewBox="0 0 300 74" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M22 40 C30 14 118 6 190 9 C258 12 292 24 288 40 C284 58 210 68 132 66 C60 64 16 56 22 38"
+          stroke="#F0E9D2" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      14 E 15 DE AGOSTO
+    </div>
+
+    <div class="wm-echo" aria-label="Deeper Conf">
+      <div class="wordmark">DEEPER•CONF</div>
+      <div class="wordmark echo" aria-hidden="true">DEEPER•CONF</div>
+      <div class="wordmark echo e2" aria-hidden="true">DEEPER•CONF</div>
+    </div>
+
+    <p class="hero-sub">Conferência de jovens e adolescentes <b>·</b> Oceano da Graça</p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://inchur.ch/oBeFM" target="_blank" rel="noopener">Inscreva-se</a>
+      <a class="btn btn-ghost" href="#convidados">Conheça os convidados</a>
+    </div>
+
+    <p class="hero-place">Campus Águas Claras · QS 1 Rua 210, 26, Areal · Brasília DF</p>
+  </div>
+</header>
+
+<!-- COUNTDOWN -->
+<section class="count-strip" aria-label="Contagem regressiva para o evento">
+  <div class="container">
+    <div class="count-grid" id="countdown">
+      <div class="count-item"><div class="num" id="cd-d">00</div><div class="lbl">Dias</div></div>
+      <div class="count-item"><div class="num" id="cd-h">00</div><div class="lbl">Horas</div></div>
+      <div class="count-item"><div class="num" id="cd-m">00</div><div class="lbl">Min</div></div>
+      <div class="count-item"><div class="num" id="cd-s">00</div><div class="lbl">Seg</div></div>
+    </div>
+    <p class="count-note">Inscrições abertas até 14 de agosto às 9h</p>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section-pad" id="sobre">
+  <div class="container sobre-grid">
+    <div class="sobre-text reveal">
+      <p class="eyebrow">Sobre o evento</p>
+      <h2>A primeira edição da Deeper Conf</h2>
+      <p>Uma conferência voltada para jovens e adolescentes, aberta a todos que desejam viver dias profundos na presença do Senhor.</p>
+      <p>Nos dias 14 e 15 de agosto, a Igreja Oceano da Graça Campus Águas Claras será o lugar de encontros profundos, adoração intensa e transformação através da presença de Deus.</p>
+    </div>
+    <div class="info-cards reveal">
+      <div class="info-card">
+        <div class="ic" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        </div>
+        <div><h3>Quando</h3><p>14 e 15 de agosto de 2026</p><small>Sexta às 20h · Sábado às 16h30 e 19h30</small></div>
+      </div>
+      <div class="info-card">
+        <div class="ic" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </div>
+        <div><h3>Onde</h3><p>Oceano da Graça · Campus Águas Claras</p><small>QS 1 Rua 210, 26, Areal, Brasília DF</small></div>
+      </div>
+      <div class="info-card">
+        <div class="ic" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z"/><path d="M4 8l2-4h12l2 4M12 12v4"/></svg>
+        </div>
+        <div><h3>Investimento</h3><p>R$ 70,00 individual</p><small>Inscrição válida para os dois dias</small></div>
+      </div>
+      <div class="info-card">
+        <div class="ic" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <div><h3>Prazo</h3><p>Inscrições até 14/08 às 9h</p><small>Ou enquanto houver vagas</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVIDADOS -->
+<section class="convidados section-pad" id="convidados">
+  <div class="container">
+    <div class="conv-head reveal">
+      <div>
+        <p class="eyebrow">Convidados</p>
+        <h2>Quem estará conosco</h2>
+      </div>
+      <p>Ministros e adoradores que caminharão com a gente nesses dois dias. Toque em cada card para assistir a um recorte.</p>
+    </div>
+    <div class="speakers">
+      <article class="speaker reveal">
+        <img src="assets/img/samuel.jpg" alt="Pr. Samuel Vagner" loading="lazy">
+        <div class="speaker-foot">
+          <button class="play-btn" data-video="assets/video/samuel.mp4" data-poster="assets/img/poster_samuel.jpg" data-name="Pr. Samuel Vagner">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5-13-7.5z"/></svg>
+            Assistir recorte
+          </button>
+        </div>
+      </article>
+      <article class="speaker reveal">
+        <img src="assets/img/lucas.jpg" alt="Pr. Lucas Paulo" loading="lazy">
+        <div class="speaker-foot">
+          <button class="play-btn" data-video="assets/video/lucas.mp4" data-poster="assets/img/poster_lucas.jpg" data-name="Pr. Lucas Paulo">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5-13-7.5z"/></svg>
+            Assistir recorte
+          </button>
+        </div>
+      </article>
+      <article class="speaker reveal">
+        <img src="assets/img/jeimesson.jpg" alt="Pr. Jeimesson Felipe" loading="lazy">
+        <div class="speaker-foot">
+          <button class="play-btn" data-video="assets/video/jeimesson.mp4" data-poster="assets/img/poster_jeimesson.jpg" data-name="Pr. Jeimesson Felipe">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5-13-7.5z"/></svg>
+            Assistir recorte
+          </button>
+        </div>
+      </article>
+      <article class="speaker reveal">
+        <img src="assets/img/john.jpg" alt="John Dias" loading="lazy">
+        <div class="speaker-foot">
+          <button class="play-btn" data-video="assets/video/john.mp4" data-poster="assets/img/poster_john.jpg" data-name="John Dias">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5-13-7.5z"/></svg>
+            Assistir recorte
+          </button>
+        </div>
+      </article>
+      <article class="speaker reveal">
+        <img src="assets/img/aquila.jpg" alt="Áquila Amorim" loading="lazy">
+        <div class="speaker-foot">
+          <button class="play-btn" data-video="assets/video/aquila.mp4" data-poster="assets/img/poster_aquila.jpg" data-name="Áquila Amorim">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5-13-7.5z"/></svg>
+            Assistir recorte
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMAÇÃO -->
+<section class="prog paper grain section-pad" id="programacao">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">Programação</p>
+      <h2>Três sessões, dois dias</h2>
+    </div>
+    <div class="prog-list reveal">
+      <div class="prog-item">
+        <div class="dia">14/08<small>Sexta</small></div>
+        <p class="desc">Sessão de abertura</p>
+        <div class="hora">20h</div>
+      </div>
+      <div class="prog-item">
+        <div class="dia">15/08<small>Sábado</small></div>
+        <p class="desc">Sessão da tarde</p>
+        <div class="hora">16h30</div>
+      </div>
+      <div class="prog-item">
+        <div class="dia">15/08<small>Sábado</small></div>
+        <p class="desc">Sessão de encerramento</p>
+        <div class="hora">19h30</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final section-pad" id="inscricao">
+  <div class="container reveal">
+    <div class="wm-echo" aria-hidden="true">
+      <div class="wordmark">DEEPER•CONF</div>
+    </div>
+    <p class="preco">Inscrição individual<b>R$ 70,00</b></p>
+    <a class="btn btn-orange" href="https://inchur.ch/oBeFM" target="_blank" rel="noopener">Fazer minha inscrição</a>
+    <p class="deadline">Inscrições até 14 de agosto às 9h · Pagamento pela plataforma inChurch</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container foot-inner">
+    <div class="foot-brand">OCEANO DA GRAÇA <span>· 25 ANOS</span></div>
+    <p>Deeper Conf 2K26 · Conferência de jovens e adolescentes</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <div class="modal-head">
+      <strong id="modalTitle">Recorte</strong>
+      <button class="modal-close" id="modalClose" aria-label="Fechar vídeo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <video id="modalVideo" controls playsinline preload="none"></video>
+  </div>
+</div>
+
+<script>
+// Countdown para 14/08/2026 20:00 (horário de Brasília)
+(function(){
+  var target = new Date('2026-08-14T20:00:00-03:00').getTime();
+  var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),
+      m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
+  function pad(n){return String(n).padStart(2,'0')}
+  function tick(){
+    var diff = target - Date.now();
+    if(diff < 0) diff = 0;
+    d.textContent = pad(Math.floor(diff/864e5));
+    h.textContent = pad(Math.floor(diff/36e5)%24);
+    m.textContent = pad(Math.floor(diff/6e4)%60);
+    s.textContent = pad(Math.floor(diff/1e3)%60);
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+// Modal de vídeo
+(function(){
+  var modal=document.getElementById('videoModal'),
+      video=document.getElementById('modalVideo'),
+      title=document.getElementById('modalTitle'),
+      close=document.getElementById('modalClose'),
+      lastFocus=null;
+  document.querySelectorAll('.play-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      lastFocus=btn;
+      title.textContent=btn.dataset.name;
+      video.poster=btn.dataset.poster;
+      video.src=btn.dataset.video;
+      modal.classList.add('open');
+      document.body.style.overflow='hidden';
+      video.play().catch(function(){});
+      close.focus();
+    });
+  });
+  function shut(){
+    modal.classList.remove('open');
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    document.body.style.overflow='';
+    if(lastFocus) lastFocus.focus();
+  }
+  close.addEventListener('click',shut);
+  modal.addEventListener('click',function(e){ if(e.target===modal) shut(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('open')) shut(); });
+})();
+
+// Reveal on scroll
+(function(){
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
